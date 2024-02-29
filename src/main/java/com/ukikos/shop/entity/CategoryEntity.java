@@ -2,6 +2,7 @@ package com.ukikos.shop.entity;
 
 import jakarta.persistence.*;
 import lombok.*;
+import org.hibernate.type.NumericBooleanConverter;
 
 import java.util.List;
 
@@ -31,6 +32,10 @@ public class CategoryEntity {
 
     @Column(name = "parent_id")
     private Integer parentId;
+
+    @Column(name = "is_last")
+    @Convert(converter = NumericBooleanConverter.class)
+    private Boolean isLast;
 
     @OneToMany(fetch = FetchType.LAZY, mappedBy = "category")
     private List<ItemEntity> items;
