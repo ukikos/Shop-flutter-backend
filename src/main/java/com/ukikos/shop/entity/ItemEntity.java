@@ -25,6 +25,9 @@ public class ItemEntity {
     @Column(name = "price", nullable = false)
     private Integer price;
 
+    @Column(name = "image_link")
+    private String imageLink;
+
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "category_id", insertable = false, updatable = false, nullable = false)
     private CategoryEntity category;

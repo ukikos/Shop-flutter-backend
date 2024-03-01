@@ -14,6 +14,9 @@ import org.springframework.security.authentication.UsernamePasswordAuthenticatio
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
+import java.util.HashMap;
+import java.util.Map;
+
 @Service
 @RequiredArgsConstructor
 public class AuthenticationService {
@@ -34,8 +37,10 @@ public class AuthenticationService {
                 .password(passwordEncoder.encode(requestDto.getPassword()))
                 .role(Role.ROLE_USER)
                 .build();
-        userRepository.save(user);
-        String jwtToken = jwtService.generateToken(user);
+        UserEntity createdUser = userRepository.save(user);
+        Map<String, Object> claims  = new HashMap<>();
+        claims.put("userId", createdUser.getId());
+        String jwtToken = jwtService.generateToken(claims, user);
         return AuthenticationResponseDto.builder()
                 .accessToken(jwtToken)
                 .build();
@@ -51,7 +56,9 @@ public class AuthenticationService {
         );
         UserEntity user = userRepository.findByEmail(requestDto.getEmail())
                 .orElseThrow(() -> new UserNotFoundException("User with email " + requestDto.getEmail() + " not found"));
-        String jwtToken = jwtService.generateToken(user);
+        Map<String, Object> claims  = new HashMap<>();
+        claims.put("userId", user.getId());
+        String jwtToken = jwtService.generateToken(claims, user);
         return AuthenticationResponseDto.builder()
                 .accessToken(jwtToken)
                 .build();
