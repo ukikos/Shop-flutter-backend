@@ -1,7 +1,7 @@
 insert into items (name, image_link, price, category_id)
     values (
            'Iphone 6',
-           null,
+           'iphone6.jpg',
            15999,
            2
        );

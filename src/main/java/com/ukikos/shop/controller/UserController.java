@@ -15,12 +15,12 @@ import org.springframework.web.bind.annotation.RestController;
 public class UserController {
 
     private final UserService userService;
-    @GetMapping("/users/id/{userId}")
+    @GetMapping("/id/{userId}")
     public ResponseEntity<UserProfileResponseDto> getUserById(@PathVariable Integer userId) {
         return ResponseEntity.ok(userService.getUserById(userId));
     }
 
-    @GetMapping("/users/email/{email}")
+    @GetMapping("/email/{email}")
     public ResponseEntity<UserProfileResponseDto> getUserByEmail(@PathVariable String email) {
         return ResponseEntity.ok(userService.getUserByEmail(email));
     }
