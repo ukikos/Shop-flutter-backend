@@ -17,6 +17,8 @@ public class ItemFullResponseDto {
 
     private Integer price;
 
+    private String imageLink;
+
     private Integer categoryId;
 
     private List<AttributeDto> attributes;

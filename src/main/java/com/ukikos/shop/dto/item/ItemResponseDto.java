@@ -15,5 +15,7 @@ public class ItemResponseDto {
 
     private Integer price;
 
+    private String imageLink;
+
     private Integer categoryId;
 }

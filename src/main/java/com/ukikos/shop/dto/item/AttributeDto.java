@@ -11,7 +11,7 @@ public class AttributeDto {
 
     private Integer id;
 
-    private String attribute;
+    private String name;
 
     private String value;
 }

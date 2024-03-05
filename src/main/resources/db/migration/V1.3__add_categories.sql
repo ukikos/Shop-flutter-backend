@@ -1,7 +1,7 @@
 insert into categories (name, image_link, parent_id, is_last)
     values (
            'Бытовая техника',
-           null,
+           'bt.png',
            null,
            0
     );
@@ -9,7 +9,7 @@ insert into categories (name, image_link, parent_id, is_last)
 insert into categories (name, image_link, parent_id, is_last)
     values (
            'Смартфоны',
-           null,
+           'smartphone.png',
            null,
            1
        );
@@ -17,15 +17,15 @@ insert into categories (name, image_link, parent_id, is_last)
 insert into categories (name, image_link, parent_id, is_last)
     values (
            'Комплектующие для ПК',
+           'pc.png',
            null,
-           null,
-           0
+           1
        );
 
 insert into categories (name, image_link, parent_id, is_last)
     values (
            'Варочные панели',
-           null,
+           'cooktop.png',
            1,
            1
        );
@@ -33,7 +33,7 @@ insert into categories (name, image_link, parent_id, is_last)
 insert into categories (name, image_link, parent_id, is_last)
 values (
            'Стиральные машины',
-           null,
+           'washing_machine.png',
            1,
            1
        );
@@ -41,7 +41,95 @@ values (
 insert into categories (name, image_link, parent_id, is_last)
 values (
            'Утюги',
-           null,
+           'iron.png',
            1,
+           0
+       );
+
+insert into categories (name, image_link, parent_id, is_last)
+values (
+           'Проводные утюги',
+           'iron.png',
+           6,
+           1
+       );
+
+insert into categories (name, image_link, parent_id, is_last)
+values (
+           'Беспроводные утюги',
+           'iron.png',
+           6,
+           1
+       );
+
+insert into categories (name, image_link, parent_id, is_last)
+values (
+           'Утюги на углях',
+           'iron.png',
+           6,
+           1
+       );
+
+insert into categories (name, image_link, parent_id, is_last)
+values (
+           'Микро-утюги',
+           'iron.png',
+           6,
+           1
+       );
+
+insert into categories (name, image_link, parent_id, is_last)
+values (
+           'Жидкие утюги',
+           'iron.png',
+           6,
+           1
+       );
+
+insert into categories (name, image_link, parent_id, is_last)
+values (
+           'Утюги 6',
+           'iron.png',
+           6,
+           1
+       );
+
+insert into categories (name, image_link, parent_id, is_last)
+values (
+           'Утюги 7',
+           'iron.png',
+           6,
+           1
+       );
+
+insert into categories (name, image_link, parent_id, is_last)
+values (
+           'Утюги 8',
+           'iron.png',
+           6,
+           1
+       );
+
+insert into categories (name, image_link, parent_id, is_last)
+values (
+           'Утюги 9',
+           'iron.png',
+           6,
+           1
+       );
+
+insert into categories (name, image_link, parent_id, is_last)
+values (
+           'Утюги 10',
+           'iron.png',
+           6,
+           1
+       );
+
+insert into categories (name, image_link, parent_id, is_last)
+values (
+           'Утюги 11',
+           'iron.png',
+           6,
            1
        );
