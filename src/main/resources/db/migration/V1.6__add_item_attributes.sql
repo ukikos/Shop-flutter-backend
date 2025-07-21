@@ -3,7 +3,7 @@ insert into item_attributes (item_id, attribute_id, value)
 values (
            1,
            1,
-           'Iphone 6 длинное описание, старичок, но еще живой'
+           'iPhone 6 — стильный и компактный смартфон с 5,6-дюймовым экраном, отличной производительностью, камерой 8 МП и долгим временем работы. Идеален для повседневных задач и прост в использовании.'
        );
 
 insert into item_attributes (item_id, attribute_id, value)
@@ -53,7 +53,7 @@ insert into item_attributes (item_id, attribute_id, value)
 values (
            2,
            1,
-           'Iphone 7 длинное описание, тоже старичок, вроде'
+           'iPhone 7 — элегантный и мощный смартфон с улучшенной производительностью и высокой надежностью. Отличается стильным дизайном, водо- и пылезащищен, предлагая отличное качество связи и удобство в использовании.'
        );
 
 insert into item_attributes (item_id, attribute_id, value)
@@ -103,7 +103,7 @@ insert into item_attributes (item_id, attribute_id, value)
 values (
            3,
            1,
-           'Iphone 8, надоело расписывать характеристики'
+           'Iphone 8 - *описание*'
        );
 
 insert into item_attributes (item_id, attribute_id, value)
