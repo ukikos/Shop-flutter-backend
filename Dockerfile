@@ -2,7 +2,7 @@
 FROM openjdk:17-jdk-alpine as builder
 
 COPY .mvn .mvn
-COPY mvnw .
+COPY --chmod=766 mvnw .
 COPY pom.xml .
 COPY src src
 
