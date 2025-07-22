@@ -3,7 +3,7 @@ version: '3.8'
 services:
   postgres:
     image: postgres:latest
-    container_name: postgres
+    container_name: shop_postgres
     env_file:
       - .env
     environment:
@@ -22,7 +22,7 @@ services:
     restart: always
 
   pgadmin:
-    container_name: pgadmin_container
+    container_name: shop_pgadmin_container
     image: dpage/pgadmin4
     environment:
       PGADMIN_DEFAULT_EMAIL: pgadmin4@pgadmin.org
@@ -40,7 +40,7 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
-    container_name: spring-boot
+    container_name: shop_spring-boot
     depends_on:
       postgres:
         condition: service_healthy
